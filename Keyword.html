@@ -185,7 +185,35 @@ td.name, th.name {
 <tr>
 <td class="name"><a name="keyword_Go To Configuration Page">Go To Configuration Page</a></td>
 <td>click element</td>
-<td>${ConfigurationL }</td>
+<td>${ConfigurationL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait until page contains element</td>
+<td>${TableNameL}</td>
+<td>timeout=20</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Go To User Page">Go To User Page</a></td>
+<td>click element</td>
+<td>${UserL}</td>
 <td></td>
 <td></td>
 </tr>
@@ -624,6 +652,48 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
+<td class="name"><a name="keyword_Create User">Create User</a></td>
+<td>[Arguments]</td>
+<td>${UserName}</td>
+<td>${UserEmail}</td>
+<td>${UserCompany}=None</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${CreateUserL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input User Information</td>
+<td>${UserName}</td>
+<td>${UserEmail}</td>
+<td>${UserCompany}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td class="name"><a name="keyword_Input Logining Information">Input Logining Information</a></td>
 <td>input text</td>
 <td>${UserNameL}</td>
@@ -988,6 +1058,55 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
+<td class="name"><a name="keyword_Input User Information">Input User Information</a></td>
+<td>[Arguments]</td>
+<td>${UserName}</td>
+<td>${UserEmail}</td>
+<td>${UserCompany}=None</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>input text</td>
+<td>${UserNameL}</td>
+<td>${UserName}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>input text</td>
+<td>${UserEmailL}</td>
+<td>${UserEmail}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run keyword if</td>
+<td>'${UserCompany}'!='None'</td>
+<td>input text</td>
+<td>${UserCompanyL}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${UserCompany}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td class="name"><a name="keyword_Read CA File">Read CA File</a></td>
 <td>[Arguments]</td>
 <td>${CertificatePath}</td>
@@ -1037,6 +1156,34 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>Go To Configuration Page</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Reload Page If User-Case Failed">Reload Page If User-Case Failed</a></td>
+<td>Run keyword If Test Failed</td>
+<td>reload page</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait until page contains element</td>
+<td>${UserL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To User Page</td>
 <td></td>
 <td></td>
 <td></td>

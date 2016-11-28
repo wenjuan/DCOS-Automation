@@ -3,12 +3,12 @@
 __author__  = "YanHuiru <hyan@linkernetworks.com>"
 __version__ = "1.1"
 
-#############通用#############
+#############Common#############
 ConfirmL       = "xpath=//*[@class='btn btn-primary ng-binding']"    #Confirmation buttons for all pop-up boxes, including confirmation,deletion,creation,saving,and so on
 CancelL        = "xpath=//*[@class='btn btn-warning ng-binding']"    #Cancel button for all pop-up boxes
 TableNameL     = "xpath=//*[text()='Name']"                          #The column name in the table cell,used to wait for the page to load
 
-#############登录页面#############
+#############Login#############
 LinkerlogoL    = "xpath=//img[@src='img/linker.png']"              #The logo on the login page,used to wait for the page to load
 UserNameL      = "xpath=//input[@name='usernameInput']"            #Input Box-User Name
 PasswordL      = "xpath=//input[@name='passwordInput']"            #Input Box-Password
@@ -34,30 +34,30 @@ Testkey3L      = "xpath=//tr/td[text()='test3']"                    #Ibidem
 Testkey3DeleteL   = "xpath=//td[text()='test3']/../td/button"       #Button-Delete Key test3
 PubkeyValueL   = "xpath=//*[@ng-model='keypair.pubkeyValue']"       #Input Box-Public Key When Uploading A Key Pair
 #SMTP Server 
-AddServerL    = "xpath=//*[@ng-click='addSMTPServer()']"            #Button-Create Server
-EditServerL = "xpath=//tr/td/button[1]"                             #Button-Edit Server
-DeleteServerL = "xpath=//tr/td/button[2]"                           #Button-Delete Server
-ServerNameL   = "name=address"                                      #Input Box-Server Name
-SMTPUserNameL     = "name=smtpname"                                 #Input Box-User Name Of Server
-SMTPPasswordL     = "name=passwd"                                   #Input Box-Password Of Server
-ServerCellName1L   = "xpath=//*[text()='smtp.qiye.163.com']"        #Cell Locator-The Name Of The Server 'smtp.qiye.163.com'
-ServerCellName2L   = "xpath=//*[text()='smtp.qq.com']"              #Cell Locator-The Name Of The Server 'smtp.qq.com'
+AddServerL     = "xpath=//*[@ng-click='addSMTPServer()']"            #Button-Create Server
+EditServerL    = "xpath=//tr/td/button[1]"                           #Button-Edit Server
+DeleteServerL  = "xpath=//tr/td/button[2]"                           #Button-Delete Server
+ServerNameL    = "name=address"                                      #Input Box-Server Name
+SMTPUserNameL     = "name=smtpname"                                  #Input Box-User Name Of Server
+SMTPPasswordL     = "name=passwd"                                    #Input Box-Password Of Server
+ServerCellName1L  = "xpath=//*[text()='smtp.qiye.163.com']"          #Cell Locator-The Name Of The Server 'smtp.qiye.163.com'
+ServerCellName2L  = "xpath=//*[text()='smtp.qq.com']"                #Cell Locator-The Name Of The Server 'smtp.qq.com'
 #Platform Management
-CreatePlatformL    = "xpath=//*[@ng-click='createPlatform()']"          #Button-Create Platform
-PlatformTypeL    = "xpath=//*[@ng-model='platform.type']"               #Select From List-Platform Type
-PSshUserL	    = "name=SshUser"                                        #Input Box-SSH User
-PNameL	        = "name=name"                                           #Input Box-Platform Name
-PAccessKeyL	    = "name=AccessKey"                                      #Input Box-Access Key
-PSecretKeyL	    = "name=SecretKey"                                      #Input Box-Secret Key
-PImageIdL	    = "name=ImageId"                                        #Input Box-Image ID
-PInstanceTypeL   = "name=InstanceType"                                  #Input Box-Instance Type
-PRootSizeL       = "name=RootSize"                                      #Input Box-Root Size(GB)
-PRegionL         = "name=Region"                                        #Input Box-Region
-PVPCIDL          = "name=VPCID"                                         #Input Box-VPC ID
-AwsPlatform1L  = "xpath=//tr/td[text()='aws1']"                      #Cell Locator-The Name Of The Platform aws1
-AwsPlatform2L  = "xpath=//tr/td[text()='aws2']"                      #Cell Locator-The Name Of The Platform aws2
+CreatePlatformL   = "xpath=//*[@ng-click='createPlatform()']"        #Button-Create Platform
+PlatformTypeL     = "xpath=//*[@ng-model='platform.type']"           #Select From List-Platform Type
+PSshUserL	    = "name=SshUser"                                     #Input Box-SSH User
+PNameL	        = "name=name"                                        #Input Box-Platform Name
+PAccessKeyL	    = "name=AccessKey"                                   #Input Box-Access Key
+PSecretKeyL	    = "name=SecretKey"                                   #Input Box-Secret Key
+PImageIdL	    = "name=ImageId"                                     #Input Box-Image ID
+PInstanceTypeL  = "name=InstanceType"                                #Input Box-Instance Type
+PRootSizeL      = "name=RootSize"                                    #Input Box-Root Size(GB)
+PRegionL        = "name=Region"                                      #Input Box-Region
+PVPCIDL         = "name=VPCID"                                       #Input Box-VPC ID
+AwsPlatform1L   = "xpath=//tr/td[text()='aws1']"                     #Cell Locator-The Name Of The Platform aws1
+AwsPlatform2L   = "xpath=//tr/td[text()='aws2']"                     #Cell Locator-The Name Of The Platform aws2
 AwsPlatform2DeleteL   = "xpath=//td[text()='aws2']/../td/button[2]"  #Button-Delete Platform aws2
-AwsPlatform3EditL   = "xpath=//td[text()='aws3']/../td/button[1]"    #Button-Edit Platform aws3
+AwsPlatform3EditL     = "xpath=//td[text()='aws3']/../td/button[1]"  #Button-Edit Platform aws3
 #Docker Registry
 CreateRegistryL    = "xpath=//*[@ng-click='createRegistry()']"          #Button-Create Registry
 RegistryNameL      = "name=name"                                        #Input Box-Registry Name
@@ -67,9 +67,32 @@ SecureFalseL       = "xpath=//input[@ng-value='false']"                 #Check-F
 CertificateL       = "name=ca_text"                                     #Input Box-Certificate
 RegistryUserNameL  = "xpath=//input[@ng-model='registry.username']"     #Input Box-Username
 RegistryPasswordL  = "xpath=//input[@ng-model='registry.password']"     #Input Box-Password
-InsecureCellNameL = "xpath=//tr/td[text()='Insecure']"                  #Cell Locator-The Name Of The Registry Insecure
-InauthCellNameL   = "xpath=//tr/td[text()='Inauth']"                    #Cell Locator-The Name Of The Registry Inauth
-CACellNameL       = "xpath=//tr/td[text()='CA']"                        #Cell Locator-The Name Of The Registry CA
-CAauthCellNameL   = "xpath=//tr/td[text()='CAauth']"                    #Cell Locator-The Name Of The Registry CAauth
-ForDeleteCellNameL   = "xpath=//tr/td[text()='ForDelete']"              #Cell Locator-The Name Of The Registry ForDelete
+InsecureCellNameL  = "xpath=//tr/td[text()='Insecure']"                 #Cell Locator-The Name Of Registry Insecure
+InauthCellNameL    = "xpath=//tr/td[text()='Inauth']"                   #Cell Locator-The Name Of Registry Inauth
+CACellNameL        = "xpath=//tr/td[text()='CA']"                       #Cell Locator-The Name Of Registry CA
+CAauthCellNameL    = "xpath=//tr/td[text()='CAauth']"                   #Cell Locator-The Name Of Registry CAauth
+ForDeleteCellNameL = "xpath=//tr/td[text()='ForDelete']"                #Cell Locator-The Name Of Registry ForDelete
 ForDeleteDeleteL   = "xpath=//tr/td[text()='ForDelete']/../td/button[2]"#Button-Delete Registry ForDelete
+
+#############User#############
+UserL            = "xpath=//*[text()='User']"                           #Page-User
+CreateUserL      = "xpath=//*[@ng-click='createUser()']"                #Button-Create User
+UserNameL        = "name=usernameInput"                                 #Input Box-UserName
+UserEmailL       = "name=emailInput"                                    #Input Box-UserEmail
+UserCompanyL     = "xpath=//*[@ng-model='user.company']"                #Input Box-UserCompany
+User1L           = "xpath=//tr/td[text()='testuser1']"                  #Cell Locator-The Name Of User testuser1
+User2L           = "xpath=//tr/td[text()='testuser2']"                  #Cell Locator-The Name Of User testuser2
+User2CompanyL    = "xpath=//td[text()='testuser2']/../td[text()='Linker']"    #Cell Locator-The Name Of Company
+User3L           = "xpath=//tr/td[text()='testuser3']"                  #Cell Locator-The Name Of User testuser3
+User3DeleteL     = "xpath=//td[text()='testuser3']/../td/button[2]"     #Button-Delete User testuser3
+User4EditL       = "xpath=//td[text()='testuser4']/../td/button[1]"     #Button-Edit User testuser4
+User4CompanyL    = "xpath=//td[text()='testuser4']/../td[text()='linker']"    #Cell Locator-The Name Of Company
+
+
+
+
+
+
+
+
+
