@@ -49,9 +49,994 @@ td.name, th.name {
 </head>
 <body>
 <h1>Configuration</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Suite Setup</td>
+<td>Run Keywords</td>
+<td>Open Google Chrome And Login</td>
+<td>Go To Configuration Page</td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Suite Teardown</td>
+<td>Security exit case</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Setup</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Teardown</td>
+<td>Reload Page If Configuration-Case Failed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>D:/Project-Automation/DCOS-Automation/Global.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Variables</td>
+<td>D:/Project-Automation/DCOS-Automation/Locator.py</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>CustomLibrary</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>D:/Project-Automation/DCOS-Automation/Keyword.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>D:/Project-Automation/DCOS-Automation/Secrecy.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 <table border="1" id="testcase">
 <tr>
 <th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Login Key Pair—Create Key Pair">Configuration—Login Key Pair—Create Key Pair</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-04\n<br>
+Precondition:There is no key named test1\n<br>
+Steps:Go to the login key management tab to create the key test1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Login Key Pair</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${CreatekeyL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>input text</td>
+<td>${KeyNameL}</td>
+<td>${KeyName1}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>page should contain</td>
+<td>Please save your private key that just can be downloaded only one time, please keep it safe.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${Testkey1L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Login Key Pair—Upload Key Pair">Configuration—Login Key Pair—Upload Key Pair</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-04\n<br>
+Precondition:There is no key named test2\n<br>
+Steps:Go to the login key management tab,Upload the public key in the local key test2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Login Key Pair</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${UploadkeyL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>input text</td>
+<td>${KeyNameL}</td>
+<td>${KeyName2}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Testpublickey}=</td>
+<td>Read File</td>
+<td>${PublicKeyPath}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>input text</td>
+<td>${PubkeyValueL}</td>
+<td>${Testpublickey}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${Testkey2L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Login Key Pair—Delete Key Pair">Configuration—Login Key Pair—Delete Key Pair</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-04\n<br>
+Precondition:There is no key named test3\n<br>
+Steps:Go to the login key management tab to create the key test3,then delete it.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Login Key Pair</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Create Key Pair</td>
+<td>${KeyName3}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${Testkey3L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${Testkey3DeleteL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${Testkey3L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—SMTP Server— Add Server">Configuration—SMTP Server— Add Server</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-04\n<br>
+Precondition:No stmp server exists\n<br>
+Steps:Go to the tab named SMTP Server to add a smtp server</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Run Keywords</td>
+<td>Select Tab-SMTP Server</td>
+<td>Delete SMTP Server If It Exists</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${ServerCellName1L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Server</td>
+<td>${SMTP1[0]}</td>
+<td>${SMTP1[1]}</td>
+<td>${SMTP1[2]}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${ServerCellName1L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—SMTP Server— Delete Server">Configuration—SMTP Server— Delete Server</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-07\n<br>
+Precondition:A stmp server exists\n<br>
+Steps:Go to the tab named SMTP Server to delete the server.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Run Keywords</td>
+<td>Select Tab-SMTP Server</td>
+<td>Add SMTP Server If It Not Exists</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${ServerCellName1L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${DeleteServerL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${ServerCellName1L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—SMTP Server—Edit Server">Configuration—SMTP Server—Edit Server</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-07\n<br>
+Precondition:A stmp server exists\n<br>
+Steps:Go to the tab named SMTP Server to edit the server.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Run Keywords</td>
+<td>Select Tab-SMTP Server</td>
+<td>Add SMTP Server If It Not Exists</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${ServerCellName1L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${EditServerL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Server Information</td>
+<td>${SMTP2[0]}</td>
+<td>${SMTP2[1]}</td>
+<td>${SMTP2[2]}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${ServerCellName2L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Platform Management—Add Platform">Configuration—Platform Management—Add Platform</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-04\n<br>
+Precondition:There is no platform named aws1\n<br>
+Steps:Go to the platform management tab to create the platform aws1.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Platform Management</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${AwsPlatform1L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Create Platform</td>
+<td>@{AwsPlatform1}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${AwsPlatform1L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Platform Management—Delete Platform">Configuration—Platform Management—Delete Platform</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-04\n<br>
+Precondition:There is no platform named aws2\n<br>
+Steps:Go to the platform management tab to create the platform aws2,then delete it.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Platform Management</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Create Platform</td>
+<td>@{AwsPlatform2}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${AwsPlatform2L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${AwsPlatform2DeleteL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${AwsPlatform2L}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Platform Management—Edit Platform">Configuration—Platform Management—Edit Platform</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-11\n<br>
+Precondition:There is no platform named aws3\n<br>
+Steps:Go to the platform management tab to create the platform aws3,then edit it.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Platform Management</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Create Platform</td>
+<td>@{AwsPlatform3}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${AwsPlatform3EditL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Edit Platform Information</td>
+<td>@{AwsPlatform3Edit}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Docker Registry— Create Registry-Insecure">Configuration—Docker Registry— Create Registry-Insecure</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-08\n<br>
+Precondition:There is no registry named Insecure\n<br>
+Steps:Go to the docker registry tab to create the registry Insecure.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Docker Registry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${InsecureCellNameL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${CreateRegistryL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Registry Information</td>
+<td>${RegistryInsecure[0]}</td>
+<td>${RegistryInsecure[1]}</td>
+<td>${RegistryInsecure[2]}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${InsecureCellNameL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Docker Registry— Create Registry-Inauth">Configuration—Docker Registry— Create Registry-Inauth</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-08\n<br>
+Precondition:There is no registry named Inauth\n<br>
+Steps:Go to the docker registry tab to create the registry Inauth.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Docker Registry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${InauthCellNameL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${CreateRegistryL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Registry Information</td>
+<td>${RegistryInauth[0]}</td>
+<td>${RegistryInauth[1]}</td>
+<td>${RegistryInauth[2]}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>None</td>
+<td>${RegistryInauth[3]}</td>
+<td>${RegistryInauth[4]}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${InauthCellNameL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Docker Registry— Create Registry-CA">Configuration—Docker Registry— Create Registry-CA</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-08\n<br>
+Precondition:There is no registry named CA\n<br>
+Steps:Go to the docker registry tab to create the registry CA.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Docker Registry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${CACellNameL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${CreateRegistryL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Registry Information</td>
+<td>${RegistryCA[0]}</td>
+<td>${RegistryCA[1]}</td>
+<td>${RegistryCA[2]}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${RegistryCA[3]}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${CACellNameL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Docker Registry— Create Registry-CAauth">Configuration—Docker Registry— Create Registry-CAauth</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-08\n<br>
+Precondition:There is no registry named CAauth\n<br>
+Steps:Go to the docker registry tab to create the registry CAauth.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Docker Registry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${CAauthCellNameL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${CreateRegistryL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Registry Information</td>
+<td>${RegistryCAauth[0]}</td>
+<td>${RegistryCAauth[1]}</td>
+<td>${RegistryCAauth[2]}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${RegistryCAauth[3]}</td>
+<td>${RegistryCAauth[4]}</td>
+<td>${RegistryCAauth[5]}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${CAauthCellNameL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Configuration—Docker Registry— Delete Registry">Configuration—Docker Registry— Delete Registry</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Version:1.0\n<br>
+Auther:YanHuiru\n<br>
+Updated:2016-11-08\n<br>
+Precondition:There is a registry named ForDelete\n<br>
+Steps:Go to the docker registry tab to delete the registry ForDelete.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Select Tab-Docker Registry</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${CreateRegistryL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Registry Information</td>
+<td>${RegistryForDelete[0]}</td>
+<td>${RegistryForDelete[1]}</td>
+<td>${RegistryForDelete[2]}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should be visible</td>
+<td>${ForDeleteCellNameL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click element</td>
+<td>${ForDeleteDeleteL}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Confirm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>element should not be visible</td>
+<td>${ForDeleteCellNameL}</td>
+<td></td>
+<td></td>
 </tr>
 </table>
 </body>
